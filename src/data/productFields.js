@@ -1,0 +1,57 @@
+export const commonFields = [
+  ['product_id', 'Product ID', (v) => `BHB${v}`],
+  ['product_name', 'Product Name'],
+  ['product_type', 'Product Type'],
+  ['product_variant', 'Product Variant'],
+  ['brand_name', 'Brand'],
+  ['color', 'Color'],
+  ['price', 'Product Price', (v) => `₹${v}`],
+  ['discount_percent', 'Discount', (v) => `${v}%`],
+  ['stock_status', 'Stock Status'],
+  ['rating', 'Rating'],
+  ['total_reviews', 'Total Reviews'],
+  ['description', 'Description'],
+];
+
+export const categoryFields = {
+  eyewear: [
+    ['eyewear_category', 'Eyewear Category'],
+    ['frame_type', 'Frame Type'],
+    ['material_type', 'Material Type'],
+    ['lens_power', 'Lens Power'],
+    ['lens_type', 'Lens Type'],
+    ['size_type', 'Size Type'],
+    ['same_color_type', 'Color Type'],
+    ['power', 'Power'],
+  ],
+  footwear: [
+    ['material_type', 'Material Type'],
+    ['sole_type', 'Sole Type'],
+    ['size_type', 'Size'],
+    ['closure_type', 'Closure Type'],
+    ['same_color_type', 'Color Type'],
+    ['heel_height', 'Heel Height'],
+  ],
+  jewellery: [
+    ['material_type', 'Material Type'],
+    ['stone_type', 'Stone Type'],
+    ['weight', 'Weight'],
+    ['same_color_type', 'Color Type'],
+  ],
+  bags: [
+    ['material_type', 'Material Type'],
+    ['size_type', 'Size Type'],
+    ['pattern_type', 'Pattern Type'],
+    ['closure_type', 'Closure Type'],
+    ['same_color_type', 'Color Type'],
+  ],
+  clothing: [
+    ['size', 'Available Sizes', (v) => (Array.isArray(v) ? v.join(', ') : v)],
+    ['material_type', 'Material Type'],
+    ['fabric_type', 'Fabric Type'],
+    ['fit_type', 'Fit Type'],
+    ['pattern_type', 'Pattern Type'],
+    ['same_color_type', 'Color Type'],
+    ['care_instructions', 'Care Instructions'],
+  ],
+};
